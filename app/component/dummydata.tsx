@@ -1,4 +1,4 @@
-
+// mockModules.ts
 export const moduleData = {
   message: "got response",
   success: true,
@@ -23,7 +23,7 @@ export const moduleData = {
       { module_id: 17, module_name: "Fabric Inspection Adishtam" },
       { module_id: 18, module_name: "Adhistam Fabric Inspection Report" },
       { module_id: 19, module_name: "Inline Quality Audit Report" },
-      { module_id: 20, module_name: "Fabric Lab Inspection" }
+      { module_id: 20, module_name: "Fabric Lab Inspection" },
     ],
     IE_DEPARTMENT: [
       { module_id: 1, module_name: "System Operation" },
@@ -33,7 +33,7 @@ export const moduleData = {
       { module_id: 5, module_name: "Operator wise Hourly Production Reports" },
       { module_id: 6, module_name: "QR Operation Reports" },
       { module_id: 7, module_name: "ForeCast Order" },
-      { module_id: 8, module_name: "ManPower Lost Time" }
+      { module_id: 8, module_name: "ManPower Lost Time" },
     ],
     CUTTING: [
       { module_id: 1, module_name: "OPSEQ" },
@@ -48,7 +48,7 @@ export const moduleData = {
       { module_id: 10, module_name: "Print & Embroidery CPI QR Gen Uploader" },
       { module_id: 11, module_name: "Print & Embroidery CPI QR Gen Reports" },
       { module_id: 12, module_name: "Cutting Panel Audit Report" },
-      { module_id: 13, module_name: "QC Rework Operation QR" }
-    ]
-  }
+      { module_id: 13, module_name: "QC Rework Operation QR" },
+    ],
+  },
 };

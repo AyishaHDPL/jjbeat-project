@@ -28,19 +28,33 @@ import { moduleData } from "@/app/component/dummydata";
 
 
 
-export async function moduleListService() {
-  // Flatten all module types into a single array like your DB query
+
+
+
+// Module type definition
+export interface Module {
+  module_id: number;
+  module_name: string;
+  module_type: "QUALITY" | "IE_DEPARTMENT" | "CUTTING";
+}
+
+
+// Module type definition
+export interface Module {
+  module_id: number;
+  module_name: string;
+  module_type: "QUALITY" | "IE_DEPARTMENT" | "CUTTING";
+}
+
+export async function moduleListService(): Promise<Module[]> {
   const { QUALITY, IE_DEPARTMENT, CUTTING } = moduleData.data;
 
-  const allModules = [
-    ...QUALITY.map((m) => ({ ...m, module_type: "QUALITY" })),
-    ...IE_DEPARTMENT.map((m) => ({ ...m, module_type: "IE_DEPARTMENT" })),
-    ...CUTTING.map((m) => ({ ...m, module_type: "CUTTING" })),
+  const allModules: Module[] = [
+    ...QUALITY.map((m) => ({ ...m, module_type: "QUALITY" as const })),
+    ...IE_DEPARTMENT.map((m) => ({ ...m, module_type: "IE_DEPARTMENT" as const })),
+    ...CUTTING.map((m) => ({ ...m, module_type: "CUTTING" as const })),
   ];
 
-  // simulate async DB call
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(allModules), 100); // optional small delay
-  });
+  return new Promise((resolve) => setTimeout(() => resolve(allModules), 50));
 }
 
