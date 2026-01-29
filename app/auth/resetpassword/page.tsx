@@ -16,13 +16,11 @@ interface passwordDetails {
 export default function ResetPassword(): JSX.Element {
   const userdetail = useAppSelector((state)=> state.forgetUser);
   const [passwordDetails, setPasswordDetails] = useState<passwordDetails>({
-    userName:userdetail.user,
+    userName:userdetail.user || "",
     password: "",
     conformPassword: "",
   });
   const router = useRouter();
-
-  console.log(userdetail, 'userdetaills')
 
   const handleOnchange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;

@@ -26,12 +26,10 @@ export default function Navbar({
   setCollapsed,
   onLogoutClick,
   showLogoutConfirm,
-  setShowLogoutConfirm,
 }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
 
-  /* ✅ ONLY LOGIC ADDITION */
   useEffect(() => {
     if (showLogoutConfirm) {
       setUserMenuOpen(false);
