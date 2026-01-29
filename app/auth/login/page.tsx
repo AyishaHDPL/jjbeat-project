@@ -35,7 +35,7 @@ export default function Login(): JSX.Element {
         url: "/api/login",
       });
 
-      if (response?.success === true) {
+      // if (response?.success === true) {
         dispatch(
           loginSuccess({
             user: response.user,
@@ -52,7 +52,7 @@ export default function Login(): JSX.Element {
         );
 
         router.push("/frontend/dashboard");
-      }
+      // }
     } catch (error) {
       console.error("error occured", error);
     }

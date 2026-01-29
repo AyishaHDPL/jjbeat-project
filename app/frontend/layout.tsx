@@ -18,7 +18,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const handleLogoutClick = () => {
     console.log("Logout clicked")
     localStorage.removeItem("login");
-    router.push("/auth/login"); // redirect to login page
+    router.push("/auth/login"); 
   };
 
   return (
@@ -34,7 +34,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
       <div className="flex flex-1">
         <Sidebar collapsed={collapsed} />
-        <main className="flex-1 p-6 bg-gray-100">{children}</main>
+        <main className={`flex-1 p-6 mt-10 ${collapsed ? "ml-10" : "ml-60"} bg-gray-100`}>{children}</main>
       </div>
       {showLogoutConfirm && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">

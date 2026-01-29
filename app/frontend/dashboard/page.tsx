@@ -48,7 +48,6 @@ export default function Dashboard() {
 
   return (
     <div className="p-6">
-      <h1>Hello</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {Object.entries(modules).map(([moduleType, moduleList]) => (
           <div
